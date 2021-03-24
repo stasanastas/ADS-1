@@ -1,7 +1,6 @@
 // Copyright 2021 NNTU-CS
 
 int cbinsearch(int *arr, int size, int value) {
-  *arr = new int[size];
   int x;
   for (int i = 0; i < size - 1; i++) {
     for (int j = 0; i < size - i - 1; j++) {
@@ -17,10 +16,11 @@ int cbinsearch(int *arr, int size, int value) {
     int c = (l + r) / 2;
     if (arr[c] > value)
       r = arr[c];
-    else l = arr[c];
-    if(arr[c] == value) {
+    else 
+     l = arr[c];
+    if (arr[c] == value) {
       res++;
-      while((arr[c - n] == value) || (arr[c + n] == value)) {
+      while ((arr[c - n] == value) || (arr[c + n] == value)) {
         if (arr[c - n] == value) {
           res++;
           n++;
