@@ -12,7 +12,7 @@ int cbinsearch(int *arr, int size, int value) {
       }
     }
   }
-  int l = *arr, r = size - 1, n = 0, res = 0;
+  int l = 0, r = size - 1, n = 0, res = 0;
   while (l <= r) {
     int c = (l + r) / 2;
     if (arr[c] > value)
@@ -31,6 +31,7 @@ int cbinsearch(int *arr, int size, int value) {
         }
       }
     }
+  }
     //printf(res);
     return res;
 }
